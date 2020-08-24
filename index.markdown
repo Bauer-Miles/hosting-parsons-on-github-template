@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: UH - Carolyn Miles - Critical Thinking Parson's Problem
+title: UH - Carolyn Miles - Critical Thinking Parsons Problem
 ---
 # Parsons Practice
 
