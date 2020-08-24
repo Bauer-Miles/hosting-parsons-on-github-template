@@ -3,41 +3,42 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: Multiple Parson's Problems on One Page - cmiles acct4337
+title: UH - Carolyn Miles - Critical Thinking Parson's Problem
 ---
 # Parsons Practice
 
-## First Project
-Correctly order Hello and Goodbye by dragging the blocks to the space below. Click "Get feedback" when you are done. If the blocks turn green you are correct.  Red means you need to try again.
+## Practice Project
+Correctly order Hello, Conversation and Goodbye by dragging the blocks to the space below. Click "Get feedback" when you are done. If the blocks turn green you are correct.  Red means you need to try again.
 
-<div id="0-sortableTrash" class="sortable-code"></div> 
-<div id="0-sortable" class="sortable-code"></div> 
+<div id="sortableTrash" class="sortable-code"></div> 
+<div id="sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
-    <input id="0-feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="0-newInstanceLink" value="Reset Problem" type="button" /> 
+    <input id="feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="newInstanceLink" value="Reset Problem" type="button" /> 
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "hello\n" +
-    "goodbye";
+  var initial = "Hello\n" +
+    "Conversation\n" +
+    "Goodbye";
   var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "0-sortable",
+    "sortableId": "sortable",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": true,
     "x_indent": 50,
     "lang": "en",
-    "trashId": "0-sortableTrash"
+    "trashId": "sortableTrash"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#0-newInstanceLink").click(function(event){ 
+  $("#newInstanceLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.shuffleLines(); 
   }); 
-  $("#0-feedbackLink").click(function(event){ 
+  $("#feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
