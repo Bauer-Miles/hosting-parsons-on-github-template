@@ -8,7 +8,7 @@ title: UH - Carolyn Miles - Critical Thinking Parson's Problem
 # Parsons Practice
 
 ## Practice Project
-Correctly order Hello, Conversation and Goodbye by dragging the blocks to the space below. Click "Get feedback" when you are done. If the blocks turn green you are correct.  Red means you need to try again.
+Correctly order Hello, Conversation and Goodbye by dragging the blocks to the yellow space below. Click "Get feedback" when you are done. If the blocks turn green you are correct.  Red means you need to try again by clicking "Reset problem".
 
 <div id="PP-sortableTrash" class="sortable-code"></div> 
 <div id="PP-sortable" class="sortable-code"></div> 
@@ -47,45 +47,49 @@ Correctly order Hello, Conversation and Goodbye by dragging the blocks to the sp
 
 
 ## Critical Thinking Project
-Put the steps to making mac and cheese in the correct order by dragging them up and down in the list.  Click "Get feedback" when you are done. If the blocks turn green you are correct.  Red means you need to try again.
+Put the steps to critical thinking project in the correct order by dragging the blocks to the yellow space below. Click "Get feedback" when you are done. If the blocks turn green you are correct.  Red means you need to try again by clicking "Reset problem". Take a photo of your correct solution with your student ID in the photo.  Submit the photo on Blackboard.
 
-<div id="jlm-sortableTrash" class="sortable-code"></div> 
-<div id="jlm-sortable" class="sortable-code"></div> 
+<div id="CT-sortableTrash" class="sortable-code"></div> 
+<div id="CT-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
-    <input id="jlm-feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="jlm-newInstanceLink" value="Reset Problem" type="button" /> 
+    <input id="CT-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="CT-newInstanceLink" value="Reset Problem" type="button" /> 
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "Boil water\n" +
-    "Add noodles\n" +
-    "Cook noodles\n" +
-    "Drain noodles\n" +
-    "Add milk and butter\n" +
-    "Add cheese\n" +
-    "Stir to combine";
+  var initial = "Import all three starting data files\n" +
+    "Verify each file import was successful\n" +
+    "Combine the two store sales files into one combined sale file\n" +
+    "Verify record count of combined sales file is correct\n" +
+    "Identify common field to join combined sales file to the item description file\n" +
+    "Join combined sales file to the item description file to create one large flat file\n" +
+    "Sum sales by day by department\n" +
+    "Verify one department's total manually\n" +
+    "Create department report showing only required fields\n" +
+    "Sum sales by day by item\n" +
+    "Verify one item's total manually\n" +
+    "Create item report showing only required fields\n" +
+    "Verify grand totals on both reports match";
   var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "jlm-sortable",
+    "sortableId": "CT-sortable",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": true,
     "x_indent": 50,
-    "lang": "en"
+    "lang": "en",
+    "trashId": "CT-sortableTrash"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#jlm-newInstanceLink").click(function(event){ 
+  $("#CT-newInstanceLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.shuffleLines(); 
   }); 
-  $("#jlm-feedbackLink").click(function(event){ 
+  $("#CT-feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
 })(); 
 </script>
-
-
-
